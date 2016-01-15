@@ -17,6 +17,12 @@ class TableViewController: UITableViewController, SecondViewControllerDelegate {
 
     }
 
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        print("x: \(rightLabel.frame.origin.x)  y: \(rightLabel.frame.origin.y)  width: \(rightLabel.frame.size.width)  height: \(rightLabel.frame.size.height)")
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -39,7 +45,7 @@ class TableViewController: UITableViewController, SecondViewControllerDelegate {
     func textViewChanged(text: String) {
         rightLabel.text = text
         
-        print("x: \(rightLabel.frame.origin.x)  y: \(rightLabel.frame.origin.y)  width: \(rightLabel.frame.size.width)  height: \(rightLabel.frame.size.height)")
+//        print("x: \(rightLabel.frame.origin.x)  y: \(rightLabel.frame.origin.y)  width: \(rightLabel.frame.size.width)  height: \(rightLabel.frame.size.height)")
     }
 
 }
