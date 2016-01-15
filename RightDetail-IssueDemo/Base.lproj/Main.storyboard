@@ -51,6 +51,7 @@
                     <navigationItem key="navigationItem" id="wOo-BV-KgK"/>
                     <connections>
                         <outlet property="rightLabel" destination="TH9-RH-zsf" id="78a-Qh-bgs"/>
+                        <outlet property="tableCell" destination="sHF-OX-LFe" id="9TW-xv-dnu"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JzI-MH-V2X" userLabel="First Responder" sceneMemberID="firstResponder"/>

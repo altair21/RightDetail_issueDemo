@@ -10,13 +10,19 @@ import UIKit
 
 class TableViewController: UITableViewController, SecondViewControllerDelegate {
     
+    @IBOutlet weak var tableCell: UITableViewCell!
     @IBOutlet weak var rightLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
-
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        tableCell.setNeedsLayout()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
