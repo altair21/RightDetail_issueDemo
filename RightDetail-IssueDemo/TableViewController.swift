@@ -38,6 +38,12 @@ class TableViewController: UITableViewController, SecondViewControllerDelegate {
     
     func textViewChanged(text: String) {
         rightLabel.text = text
+        
+        let string = text as NSString
+        let contentWidth = string.sizeWithAttributes([NSFontAttributeName: self.rightLabel.font]).width
+        let rightLabelMaxX = CGRectGetMaxX(rightLabel.frame)
+        rightLabel.frame = CGRectMake(rightLabelMaxX - contentWidth, rightLabel.frame.origin.y, contentWidth, 19.5)
+        print(rightLabel.frame.origin.x, self.rightLabel.frame.origin.y, self.rightLabel.frame.size.width, self.rightLabel.frame.size.height)
     }
 
 }
