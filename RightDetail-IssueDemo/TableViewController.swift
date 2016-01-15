@@ -38,6 +38,8 @@ class TableViewController: UITableViewController, SecondViewControllerDelegate {
     
     func textViewChanged(text: String) {
         rightLabel.text = text
+        
+        print("x: \(rightLabel.frame.origin.x)  y: \(rightLabel.frame.origin.y)  width: \(rightLabel.frame.size.width)  height: \(rightLabel.frame.size.height)")
     }
 
 }
